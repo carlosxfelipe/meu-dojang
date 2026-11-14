@@ -1,17 +1,79 @@
-# meu_dojang
+# Meu Dojang
 
-A new Flutter project.
+[![Flutter](https://img.shields.io/badge/Flutter-3.50.0-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.14.0-0175C2?logo=dart&logoColor=white)](https://dart.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Getting Started
+Aplicativo Flutter para gerenciamento de academias de Taekwondo, atualmente em construção.
 
-This project is a starting point for a Flutter application.
+Este projeto foi criado a partir do template [flutter-route-kit](https://github.com/carlosxfelipe/flutter-route-kit).
 
-A few resources to get you started if this is your first Flutter project:
+## Configuração
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Instale as dependências após clonar o repositório:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+```
+
+## Executando o App
+
+Liste os dispositivos e IDs disponíveis:
+
+```bash
+flutter devices
+```
+
+Executar na Web (Chrome):
+
+```bash
+flutter run -d chrome
+```
+
+Inicie o simulador do iOS primeiro caso nenhum esteja em execução:
+
+```bash
+flutter emulators --launch apple_ios_simulator
+```
+
+Executar no iOS (corresponde a um simulador de iPhone ou iPhone conectado pelo prefixo do nome):
+
+```bash
+flutter run -d iphone
+```
+
+Iniciar o emulador Android (`Medium_Phone`):
+
+```bash
+flutter emulators --launch Medium_Phone
+```
+
+Executar no Android (ou em qualquer dispositivo específico pelo ID obtido em `flutter devices`):
+
+```bash
+flutter run -d <device-id>
+```
+
+## Formatação, Lint e Testes
+
+Formatar o código Dart:
+
+```bash
+dart format .
+```
+
+Executar análise estática / lint:
+
+```bash
+flutter analyze
+```
+
+Executar testes:
+
+```bash
+flutter test
+```
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE) © 2026 Carlos Felipe Araujo.
