@@ -28,29 +28,7 @@ class ProfileScreen extends StatelessWidget {
                 style: textTheme.titleMedium,
               ),
               const SizedBox(height: 8),
-              SegmentedButton<UserRole>(
-                segments: const [
-                  ButtonSegment(
-                    value: UserRole.admin,
-                    label: Text('Admin'),
-                    icon: Icon(Icons.admin_panel_settings_outlined),
-                  ),
-                  ButtonSegment(
-                    value: UserRole.instructor,
-                    label: Text('Instrutor'),
-                    icon: Icon(Icons.sports_martial_arts_outlined),
-                  ),
-                  ButtonSegment(
-                    value: UserRole.student,
-                    label: Text('Aluno'),
-                    icon: Icon(Icons.school_outlined),
-                  ),
-                ],
-                selected: {role},
-                onSelectionChanged: (selection) {
-                  authSession.setRole(selection.first);
-                },
-              ),
+              const RoleSwitcher(),
               const SizedBox(height: 20),
               Text('Configurações', style: textTheme.titleMedium),
               const SizedBox(height: 8),
