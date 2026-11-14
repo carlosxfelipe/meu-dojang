@@ -60,7 +60,7 @@ class _AppBottomSheetBody extends StatelessWidget {
                     ),
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      tooltip: 'Close',
+                      tooltip: 'Fechar',
                       icon: const Icon(Icons.close),
                     ),
                   ],

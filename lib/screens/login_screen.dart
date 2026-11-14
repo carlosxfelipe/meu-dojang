@@ -55,18 +55,18 @@ class _LoginScreenState extends State<LoginScreen> {
     final shouldDiscard = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog.adaptive(
-        title: const Text('Discard credentials?'),
+        title: const Text('Descartar credenciais?'),
         content: const Text(
-          'You have unsaved input. Do you want to clear the form?',
+          'Você tem dados não salvos. Deseja limpar o formulário?',
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Cancel'),
+            child: const Text('Cancelar'),
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Discard'),
+            child: const Text('Descartar'),
           ),
         ],
       ),
@@ -99,14 +99,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 32),
                       AppTextField(
                         controller: _emailController,
-                        label: 'Email',
+                        label: 'E-mail',
                         prefixIcon: Icons.email_outlined,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
                         autofillHints: const [AutofillHints.email],
                         validator: (value) {
                           if (value == null || value.trim().isEmpty) {
-                            return 'Please enter your email';
+                            return 'Informe seu e-mail';
                           }
                           return null;
                         },
@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 16),
                       AppTextField(
                         controller: _passwordController,
-                        label: 'Password',
+                        label: 'Senha',
                         prefixIcon: Icons.lock_outline,
                         obscureText: true,
                         enableVisibilityToggle: true,
@@ -123,14 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         onFieldSubmitted: (_) => _submit(),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Please enter your password';
+                            return 'Informe sua senha';
                           }
                           return null;
                         },
                       ),
                       const SizedBox(height: 24),
                       AppButton(
-                        label: 'Sign in',
+                        label: 'Entrar',
                         rightIcon: Icons.arrow_forward,
                         fullWidth: true,
                         height: 52,
@@ -138,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const SizedBox(height: 12),
                       AppButton(
-                        label: 'Create account',
+                        label: 'Criar conta',
                         variant: AppButtonVariant.text,
                         fullWidth: true,
                         onPressed: widget.onSignUp ?? () {},
@@ -181,14 +181,14 @@ class _LoginHeader extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         Text(
-          'Welcome back',
+          'Bem-vindo de volta',
           style: textTheme.headlineMedium?.copyWith(
             fontWeight: FontWeight.w600,
           ),
         ),
         const SizedBox(height: 6),
         Text(
-          'Sign in to continue to Flutter Route Kit.',
+          'Entre para continuar no Meu Dojang.',
           style: textTheme.bodyLarge?.copyWith(
             color: colorScheme.onSurfaceVariant,
           ),

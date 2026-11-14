@@ -6,7 +6,7 @@ class AppSearchHeader extends StatefulWidget implements PreferredSizeWidget {
   const AppSearchHeader({
     super.key,
     this.controller,
-    this.hintText = 'Search...',
+    this.hintText = 'Buscar...',
     this.onChanged,
     this.onSubmitted,
     this.onClear,
@@ -122,7 +122,7 @@ class _AppSearchHeaderState extends State<AppSearchHeader> {
           if (_controller.text.isNotEmpty)
             IconButton(
               onPressed: _handleClear,
-              tooltip: 'Clear',
+              tooltip: 'Limpar',
               icon: const Icon(Icons.close),
             ),
         ],

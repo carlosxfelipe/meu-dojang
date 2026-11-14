@@ -37,7 +37,7 @@ class ClassesScreen extends StatelessWidget {
                   child: const AppListCard(
                     icon: Icons.add_circle_outline,
                     title: 'Criar nova turma',
-                    subtitle: 'Definir horário, tatame e instrutor responsável',
+                    subtitle: 'Definir horário, local e instrutor responsável',
                   ),
                 ),
                 const AppListCard(
@@ -54,7 +54,7 @@ class ClassesScreen extends StatelessWidget {
                 const AppListCard(
                   icon: Icons.schedule_outlined,
                   title: 'Seg, Qua e Sex • 19:00 - 20:00',
-                  subtitle: 'Juvenil e Adulto • Tatame 1',
+                  subtitle: 'Juvenil e Adulto • Inside Park',
                 ),
                 const AppListCard(
                   icon: Icons.check_circle_outline,

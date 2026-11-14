@@ -10,19 +10,29 @@ class HomeScreen extends StatelessWidget {
 
   static const _upcomingClasses = [
     (
+      time: '09:00',
+      title: 'Turma Infantil (Manhã)',
+      subtitle: 'Colégio Integral • 10 alunos confirmados',
+    ),
+    (
+      time: '15:30',
+      title: 'Turma Infantil (Tarde)',
+      subtitle: 'Colégio Integral • 16 alunos confirmados',
+    ),
+    (
       time: '18:00',
-      title: 'Turma Infantil (6 a 10 anos)',
-      subtitle: 'Tatame 1 • 14 alunos confirmados',
+      title: 'Turma Infantil e Juvenil (Noite)',
+      subtitle: 'Colégio Integral • 14 alunos confirmados',
     ),
     (
       time: '19:15',
       title: 'Juvenil e Adulto',
-      subtitle: 'Tatame 1 • 22 alunos confirmados',
+      subtitle: 'Inside Park • 22 alunos confirmados',
     ),
     (
       time: '20:30',
       title: 'Treino de Matsogi (Luta)',
-      subtitle: 'Tatame 2 • 12 alunos confirmados',
+      subtitle: 'Inside Park • 12 alunos confirmados',
     ),
   ];
 
@@ -35,13 +45,12 @@ class HomeScreen extends StatelessWidget {
   static const _notices = [
     (
       title: 'Exame de Faixa em 28/11',
-      description:
-          'Inscrições abertas até sexta-feira. Confirme a lista de alunos aptos.',
+      description: 'Inscrições abertas até sexta-feira. Confirme a lista de alunos aptos.',
     ),
     (
       title: 'Treino especial de Tul',
       description:
-          'Sábado às 09h00 no tatame principal. Revisão de Chon-Ji até Choong-Moo.',
+          'Sábado às 09h00 no Inside Park. Revisão de Chon-Ji até Choong-Moo.',
     ),
   ];
 
@@ -61,7 +70,9 @@ class HomeScreen extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(
               SnackBar(
-                content: Text('${_notices.length} avisos importantes no dojang.'),
+                content: Text(
+                  '${_notices.length} avisos importantes no dojang.',
+                ),
               ),
             );
         },
@@ -169,7 +180,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   title: 'Seg, Qua e Sex • 19:00 - 20:00',
-                  subtitle: 'Juvenil e Adulto • Tatame 1',
+                  subtitle: 'Juvenil e Adulto • Inside Park',
                   onTap: () => context.go('/aulas'),
                 ),
               if (isStaff) ...[
