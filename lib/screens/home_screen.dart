@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       subtitle: 'Colégio Integral • 10 alunos confirmados',
     ),
     (
-      time: '15:30',
+      time: '15:00',
       title: 'Turma Infantil (Tarde)',
       subtitle: 'Colégio Integral • 16 alunos confirmados',
     ),
@@ -25,12 +25,12 @@ class HomeScreen extends StatelessWidget {
       subtitle: 'Colégio Integral • 14 alunos confirmados',
     ),
     (
-      time: '19:15',
+      time: '19:00',
       title: 'Juvenil e Adulto',
       subtitle: 'Inside Park • 22 alunos confirmados',
     ),
     (
-      time: '20:30',
+      time: '20:00',
       title: 'Treino de Matsogi (Luta)',
       subtitle: 'Inside Park • 12 alunos confirmados',
     ),

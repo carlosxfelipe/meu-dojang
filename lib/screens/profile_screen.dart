@@ -1,6 +1,7 @@
 import 'package:material_ui/material_ui.dart';
 
 import '../router/auth_session.dart';
+import '../theme/app_theme.dart';
 import '../widgets/widgets.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -35,23 +36,38 @@ class ProfileScreen extends StatelessWidget {
               RoleGate(
                 allowedRoles: const {UserRole.admin},
                 child: const AppListCard(
-                  icon: Icons.sports_martial_arts_outlined,
-                  title: 'Dados do dojang',
-                  subtitle: 'Nome da academia, endereço e horários',
-                ),
-              ),
-              RoleGate(
-                allowedRoles: const {UserRole.admin},
-                child: const AppListCard(
                   icon: Icons.manage_accounts_outlined,
                   title: 'Equipe e permissões',
                   subtitle: 'Gerenciar instrutores subordinados',
                 ),
               ),
-              const AppListCard(
-                icon: Icons.settings_outlined,
-                title: 'Preferências',
-                subtitle: 'Notificações, tema e conta',
+              ValueListenableBuilder<ThemeMode>(
+                valueListenable: themeModeNotifier,
+                builder: (context, mode, _) {
+                  return AppListCard(
+                    icon: Icons.settings_outlined,
+                    title: 'Preferências',
+                    subtitle: 'Tema: ${mode.label} • Notificações e conta',
+                    onTap: () {
+                      showAppBottomSheet<void>(
+                        context: context,
+                        title: 'Preferências',
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Tema do aplicativo',
+                              style: textTheme.titleMedium,
+                            ),
+                            const SizedBox(height: 12),
+                            const ThemeSwitcher(),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
               ),
               const SizedBox(height: 16),
               AppButton(

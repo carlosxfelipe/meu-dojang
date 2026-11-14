@@ -43,7 +43,7 @@ class ClassesScreen extends StatelessWidget {
                 const AppListCard(
                   icon: Icons.schedule_outlined,
                   title: 'Horários e turmas',
-                  subtitle: 'Gerenciar turmas infantis, juvenis e adultos',
+                  subtitle: 'Gerenciar horários, locais e turmas',
                 ),
                 const AppListCard(
                   icon: Icons.fact_check_outlined,

@@ -1,5 +1,17 @@
 import 'package:material_ui/material_ui.dart';
 
+final ValueNotifier<ThemeMode> themeModeNotifier = ValueNotifier<ThemeMode>(
+  ThemeMode.system,
+);
+
+extension ThemeModeLabel on ThemeMode {
+  String get label => switch (this) {
+    ThemeMode.light => 'Claro',
+    ThemeMode.dark => 'Escuro',
+    ThemeMode.system => 'Sistema',
+  };
+}
+
 abstract final class AppTheme {
   static const Color seedColor = Colors.blue;
 
