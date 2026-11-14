@@ -1,5 +1,9 @@
+export 'classes_screen.dart';
 export 'explore_screen.dart';
+export 'finance_screen.dart';
 export 'home_screen.dart';
 export 'login_screen.dart';
 export 'main_shell_screen.dart';
 export 'placeholder_screen.dart';
+export 'profile_screen.dart';
+export 'students_screen.dart';

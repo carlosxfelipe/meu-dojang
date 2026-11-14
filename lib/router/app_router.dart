@@ -5,7 +5,6 @@ import 'auth_session.dart';
 
 // Set to false to disable the login flow and start directly on /home.
 const bool _requireAuth = true;
-final AuthSession authSession = AuthSession();
 
 final GoRouter appRouter = GoRouter(
   initialLocation: _requireAuth ? '/login' : '/home',
@@ -43,20 +42,32 @@ final GoRouter appRouter = GoRouter(
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: '/explore',
-              builder: (context, state) => const ExploreScreen(),
+              path: '/alunos',
+              builder: (context, state) => const StudentsScreen(),
             ),
           ],
         ),
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: '/profile',
-              builder: (context, state) => const PlaceholderScreen(
-                title: 'Profile',
-                description:
-                    'Account screen. Manage user details and preferences here.',
-              ),
+              path: '/aulas',
+              builder: (context, state) => const ClassesScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/financeiro',
+              builder: (context, state) => const FinanceScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/perfil',
+              builder: (context, state) => const ProfileScreen(),
             ),
           ],
         ),
